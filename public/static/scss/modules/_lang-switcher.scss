@@ -1,0 +1,11 @@
+.lang-switcher .lang-item {
+	float: left;
+	margin-right: 1em;
+	list-style: none;
+	img {
+		margin: 8px 0px 8px 0;
+	}
+	@media (max-width: $large-mobile) {
+		float: none;
+	}
+}

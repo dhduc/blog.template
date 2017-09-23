@@ -1,0 +1,22 @@
+.sidebar {
+    background: #fff;
+    width: 30%;
+    float: right;
+    padding-top: 30px;
+    .widget {
+        .lead {
+            text-transform: uppercase;
+        }
+    }
+    .vertical_menu {
+        list-style: none;
+        margin: 0 30px;
+        li {
+            padding: 5px 0;
+            a {
+                color: #111;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

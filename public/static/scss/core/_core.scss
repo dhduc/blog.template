@@ -1,0 +1,44 @@
+$white: #fff;
+$black: #000;
+$md-screen: 1024px;
+$x-small-screen: 667px;
+$xx-small-screen: 480px;
+
+// Override foundation
+$link-color: #2199E8;
+body {
+    background: #fff;
+}
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:focus, &:hover {
+        color: $link-color - #111;
+    }
+}
+ul {
+	list-style: none;
+}
+.row {
+    max-width: 70rem;
+}
+.row .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.pagination {
+    clear: both;
+    text-align: center;
+}
+.column:last-child, .columns:last-child {
+	float: left;
+}
+
+code {
+    border: none;
+    padding: 0;
+}
+
+.post-content pre[class*="language-"] {
+    padding: 0.5em;
+}

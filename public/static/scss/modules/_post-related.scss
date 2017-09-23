@@ -1,0 +1,25 @@
+/* post-related */
+.post-related {
+    margin-top: 35px;
+    .section-title {
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+    .list-post {
+        li {
+          display: block;
+          overflow: auto;
+          margin-bottom: 20px;
+          .post-thumbnail {
+              float: left;
+              width: 100px;
+              height: auto;
+              margin-right: 10px;
+              img {
+              }
+          }
+          .post-title {
+          }
+        }
+    }
+}

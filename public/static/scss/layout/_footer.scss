@@ -1,0 +1,98 @@
+$footer-bg: #26272B;
+$footer-primary-color: #fff;
+$footer-secondary-color: #a2abb7;
+
+$footer-bottom-bg: $footer-bg - #111;
+$footer-bottom-color: #a2abb7;
+
+$icon-bg: #C8C8C8;
+$link-bg: #C8C8C8;
+.footer {
+    background: $footer-bg;
+    padding: 0;
+    .columns {
+        padding: 0;
+    }
+    .top {
+        border: none;
+        background-color: $footer-bg;
+        margin: 0;
+        li, a {
+            color: $footer-secondary-color;
+        }
+        h5 {
+            font-family: "PT Sans Narrow", sans-serif;
+            font-size: 20px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            color: $footer-primary-color;
+        }
+        p {
+            color: $footer-secondary-color;
+        }
+        .link {
+            color: #07c;
+        }
+        .vertical {
+            li {
+                a {
+                    font-family: "Open Sans", Arial, sans-serif;
+                    // font-size: 13px;
+                }
+            }
+        }
+        .inline-list {
+            a {
+                display: inline-block;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+                color: #48525E;
+                text-align: center;
+                line-height: 41px;
+                margin: 0 3px 0 0;
+                &.facebook { background-color: #3B5998; }
+                &.twitter { background-color: #6CDFEA; }
+                &.github { background-color: #FFFFFF; }
+                &.email { background-color: #00A8EF; }
+                .fa {
+                    color: white;
+                }
+                .fa-github {
+                    color: #24292e;
+                }
+            }
+        }
+    }
+    .bottom {
+        background: $footer-bottom-bg;
+        color: $footer-bottom-color;
+        font-size: 12px;
+    font-weight: 300;
+    padding: 10px 0;
+        a {
+            color: $footer-bottom-color;
+        }
+        .footer-menu {
+            ul {
+                > li {
+                    color: $footer-bottom-color;
+                    padding-left: 0;
+                    font-weight: normal;
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        .copyright {
+            ul {
+                li {
+                    color: $footer-bottom-color;
+                    padding: 0;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

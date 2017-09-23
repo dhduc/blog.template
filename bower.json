@@ -1,0 +1,17 @@
+{
+  "name": "blog.template",
+  "description": "Blog template",
+  "main": "index.js",
+  "authors": [
+    "Duc Dao"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
