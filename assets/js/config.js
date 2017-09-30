@@ -2,10 +2,10 @@ requirejs.config({
   baseUrl: site.js_path,
 
   paths: {
-    jquery: "libs/jquery-2.1.4.min",
-    jquery_menu: "libs/jquery.menu",
-    highlightjs: "libs/highlightjs.min",
-    prism: "libs/prism"
+    jquery: "lib/js/jquery-2.1.4.min",
+    jquery_menu: "lib/js/jquery.menu",
+    highlightjs: "lib/js/highlightjs.min",
+    prism: "lib/js/prism"
   },
 
   shim: {
@@ -16,4 +16,4 @@ requirejs.config({
 
 });
 // Load the main app module to start the app
-requirejs(["app"]);
+requirejs(["js/app"]);

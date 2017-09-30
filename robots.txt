@@ -1,0 +1,4 @@
+# www.robotstxt.org/
+
+User-agent: *
+Sitemap: https://newbie-dev.net/sitemap.xml

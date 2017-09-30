@@ -1,11 +1,57 @@
 {
-  "name": "blog.template",
+  "name": "newbie-dev",
   "version": "1.0.0",
-  "description": "Blog template",
+  "description": "This repository holds our forked version of the popular Hyde theme for Jekyll ([original readme](./README-original.md)).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "fix": "./node_modules/.bin/eslint js/*.js --fix",
+    "test": "./node_modules/.bin/grunt ci",
+    "build": "webpack -p",
+    "babel": "babel --presets es2015 src/app.js -o build/main.bundle.js",
+    "dev": "webpack-dev-server"
   },
-  "author": "Duc Dao",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhduc/jekyll-hyde.git"
+  },
+  "author": "ducdh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhduc/jekyll-hyde/issues"
+  },
+  "homepage": "https://github.com/dhduc/jekyll-hyde#readme",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.0.0",
+    "grunt-less": "^0.1.7",
+    "grunt-postcss": "latest",
+    "jit-grunt": "^0.10.0",
+    "react": "^15.6.2",
+    "react-addons-update": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "peerDependencies": {
+    "grunt-cli": "^1.2.0"
+  }
 }
