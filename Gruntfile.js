@@ -14,6 +14,7 @@ module.exports = function (grunt) {
     ];
 
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         pug: {
           compile: {
             options: {
@@ -22,10 +23,10 @@ module.exports = function (grunt) {
               }
             },
             files: {
-              'path/to/dest.html': ['path/to/templates/*.pug', 'another/path/tmpl.pug']
+              'index.html': ['index.pug']
             }
           }
-        }
+        },
         sass: {
             dist: {
                 options: {
@@ -102,6 +103,13 @@ module.exports = function (grunt) {
             }
         }
     });
+
+    // Loading dependencies
+    for ( key in grunt.file.readJSON( "package.json" ).devDependencies ) {
+        if ( key !== "grunt" && key.indexOf( "grunt" ) === 0 ) {
+            grunt.loadNpmTasks( key );
+        }
+    }
 
     grunt.registerTask('dev', ['less', 'concat', 'uglify']);
     grunt.registerTask('prod', ['less', 'concat', 'cssmin', 'uglify']);
