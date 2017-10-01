@@ -50,8 +50,5 @@
   },
   "dependencies": {
     "express": "^4.16.1"
-  },
-  "peerDependencies": {
-    "grunt-cli": "^1.2.0"
   }
 }

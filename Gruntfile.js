@@ -23,7 +23,8 @@ module.exports = function (grunt) {
               }
             },
             files: {
-              'index.html': ['index.pug']
+              'index.html': ['index.pug'],
+              'post.html': ['post.pug'],
             }
           }
         },
