@@ -1,53 +1,27 @@
-# Hyde
-
-# [Jekyll](https://jekyllrb.com/)
-
-## Install dev packages
-
-```
-sudo apt-get install ruby-full
-gem install bundler
-```
+# Blog Template
 
 ## Get started
 
+### Install
+
 ```
-bundle install --path vendor/bundle
-npm install
 bower install
+npm install
 ```
 
-## Grunt
+### Grunt
 
 ```
-grunt prod
+grunt default
 ```
 
-## Webpack
+### Webpack
 
 ```
 webpack -w
 ```
 
-## Build
-
-```
-bundle exec jekyll build [--watch]
-```
-
-## Server
-
-```
-bundle exec jekyll server [--detach]
-```
-
-References:
-
-- [Jekyll Algolia](https://github.com/algolia/algoliasearch-jekyll)
-
-## Materialize Dashboard
-
-### Usage:
+## Usage:
 
 | Command | Description |
 | -------- | -------- |
@@ -56,12 +30,6 @@ References:
 | grunt cssmin | Minify CSS |
 | grunt uglify | Minify JS |
 | grunt dev | Develop watch mode |
-| grunt ci | Eslint test |
+| npm test | Eslint test |
 | npm run fix | Eslint fix |
 | npm start | Start Express server |
-
-## Changelog:
-
-- 1.0: Get started with ReactJS
-
-- 2.0: Using ES6, Webpack

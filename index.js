@@ -2,7 +2,7 @@
 const port = 3000;
 var express = require('express');
 var app = express();
-app.use('/', express.static(__dirname + '/'));
+app.use('/', express.static(__dirname + '/public/'));
 app.listen(port, function (err) {
     if (err) {
         return console.log('something bad happened', err)

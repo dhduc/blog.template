@@ -1,0 +1,16 @@
+$white: #fff;
+$black: #000;
+$md-screen: 1024px;
+$x-small-screen: 667px;
+$xx-small-screen: 480px;
+
+// Override foundation
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}

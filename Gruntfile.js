@@ -2,15 +2,9 @@ module.exports = function (grunt) {
     require('jit-grunt')(grunt);
 
     var cssResources = [
-        'public/css/font-awesome.min.css',
-        'public/css/poole.css',
-        'public/css/syntax.css',
-        'public/css/hyde.css',
-        'public/css/app.css',
-        'public/css/algolia.css',
-        'public/css/prism.css',
-        'public/css/main.css',
-        'public/css/github-calendar.css'
+        'public/css/blog-home.css',
+        'public/css/blog-post.css',
+        'public/css/style.css'
     ];
 
     grunt.initConfig({
@@ -23,8 +17,10 @@ module.exports = function (grunt) {
               }
             },
             files: {
-              'index.html': ['index.pug'],
-              'post.html': ['post.pug'],
+              'public/index.html': ['public/pug/index.pug'],
+              'public/post.html': ['public/pug/post.pug'],
+              'public/404.html': ['public/pug/404.pug'],
+              'public/500.html': ['public/pug/500.pug']
             }
           }
         },
@@ -35,36 +31,30 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'scss',
-                    src: ['styles.scss'],
-                    dest: 'css',
+                    cwd: 'public/scss',
+                    src: ['style.scss'],
+                    dest: 'public/css',
                     ext: '.css'
                 }]
             }
         },
-        less: {
-            dist: {
-                options: {
-                    compress: true,
-                    yuicompress: true,
-                    optimization: 2
-                },
-                files: {
-                    "public/css/main.css": "public/less/main.less"
-                }
-            }
-        },
         watch: {
+            html: {
+                files: {
+                    'public/index.html': ['public/pug/index.pug'],
+                    'public/post.html': ['public/pug/post.pug']
+                },
+                tasks: ['pug']
+            },
             css: {
-                files: ['public/less/*.less'], // which files to watch
-                tasks: ['less', 'concat', 'cssmin'],
+                files: ['public/scss/*.scss'], // which files to watch
+                tasks: ['sass', 'concat', 'cssmin'],
                 options: {
                     nospawn: true
                 }
             },
             js: {
                 files: {
-                    'public/js/algolia.min.js': ['public/js/algolia.js'],
                     'public/js/app.min.js': ['public/js/app.js'],
                     'public/js/config.min.js': ['public/js/config.js']
                 },
@@ -86,7 +76,6 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    'public/js/algolia.min.js': ['public/js/algolia.js'],
                     'public/js/app.min.js': ['public/js/app.js'],
                     'public/js/config.min.js': ['public/js/config.js']
                 }
@@ -96,7 +85,7 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 options: {
-                    banner: '/*! styles.min.css 1.0.0 | Duc Dao (@huuduc2107) | newbie-dev.net */'
+                    banner: '/*! styles.min.css 1.0.0 | Duc Dao (@huuduc2107) */'
                 },
                 files: {
                     'public/css/styles.min.css': ['public/css/styles.css']
@@ -112,6 +101,6 @@ module.exports = function (grunt) {
         }
     }
 
-    grunt.registerTask('dev', ['less', 'concat', 'uglify']);
-    grunt.registerTask('prod', ['less', 'concat', 'cssmin', 'uglify']);
+    grunt.registerTask('style', ['sass', 'concat', 'cssmin']);
+    grunt.registerTask('default', ['pug', 'style', 'uglify']);
 };

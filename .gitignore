@@ -1,5 +1,7 @@
 .idea
 node_modules
-assets/components
 npm-debug.log
 .sass-cache
+public/lib/jquery
+public/lib/requirejs
+public/lib/clipboard
