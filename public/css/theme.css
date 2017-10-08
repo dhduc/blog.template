@@ -1,0 +1,19 @@
+.navbar.creative {
+  background: #fff;
+  border-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .navbar.creative .container .navbar-brand {
+    color: #777;
+    padding: 15px 20px;
+    font-weight: 800;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap; }
+  .navbar.creative .container .navbar-nav > .nav-item > .nav-link {
+    color: #777; }
+    .navbar.creative .container .navbar-nav > .nav-item > .nav-link .active {
+      color: #777; }
+    .navbar.creative .container .navbar-nav > .nav-item > .nav-link:hover {
+      color: #777; }

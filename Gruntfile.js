@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'public/scss',
-                    src: ['style.scss'],
+                    src: ['style.scss', 'theme.scss'],
                     dest: 'public/css',
                     ext: '.css'
                 }]
